@@ -63,6 +63,17 @@ func SetReaderConfigResponse(messageID uint32) []byte {
 	return Pack(data)
 }
 
+// ErrorMessage generates ErrorMessage message.
+func ErrorMessage(messageID uint32, errorCode uint8) []byte {
+	var data = []interface{}{
+		uint16(100 + 1024), // Rsvd+Ver+Type=63 (READER_EVENT_NOTIFICATION)
+		uint32(11),         // Length
+		messageID,          // ID
+		uint8(errorCode),
+	}
+	return Pack(data)
+}
+
 //GetReaderCapability :
 func GetReaderCapability(messageID uint32) []byte {
 	getReaderCapabilityLength := 1 + 10
