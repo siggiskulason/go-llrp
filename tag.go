@@ -10,7 +10,7 @@ import (
 	"encoding/gob"
 	"strconv"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 // Tag holds a single virtual tag content

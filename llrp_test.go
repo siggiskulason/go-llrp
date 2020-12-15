@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 var packtests = []struct {
@@ -33,7 +33,7 @@ func TestPack(t *testing.T) {
 }
 
 func TestUnmarshalROAccessReportBody(t *testing.T) {
-	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/iomz/go-llrp/test/data/1000-tags.gob"
+	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/siggiskulason/go-llrp/test/data/1000-tags.gob"
 	size := 100
 	// load up the tags from the file
 	var largeTags Tags
@@ -60,9 +60,7 @@ func TestUnmarshalROAccessReportBody(t *testing.T) {
 		t.Fatal("TagReportDataStack generation failed")
 	}
 
-	var res []*ReadEvent
-	for i, trd := range trds {
-		roar := NewROAccessReport(trd.Data, uint32(i))
+	var res []*ReadEventiomz(i))
 		res = append(res, UnmarshalROAccessReportBody(roar.data[10:])...)
 	}
 
@@ -73,7 +71,7 @@ func TestUnmarshalROAccessReportBody(t *testing.T) {
 
 /*
 func BenchmarkUnmarshalLargeROAR(b *testing.B) {
-	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/iomz/go-llrp/test/data/million-tags.gob"
+	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/siggiskulason/go-llrp/test/data/million-tags.gob"
 	// load up the tags from the file
 	var largeTags Tags
 	binutil.Load(largeTagsGOB, &largeTags)
@@ -133,7 +131,7 @@ func BenchmarkUnmarshalLargeROAR(b *testing.B) {
 */
 
 func benchmarkUnmarshalNTags(nTags int, b *testing.B) {
-	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/iomz/go-llrp/test/data/million-tags.gob"
+	largeTagsGOB := os.Getenv("GOPATH") + "/src/github.com/siggiskulason/go-llrp/test/data/million-tags.gob"
 	// load up the tags from the file
 	var largeTags Tags
 	binutil.Load(largeTagsGOB, &largeTags)
