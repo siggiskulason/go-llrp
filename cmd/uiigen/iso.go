@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 // GetISO6346CD returns check digit for container serial number

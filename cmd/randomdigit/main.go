@@ -5,7 +5,8 @@ import (
 	"io"
 	"os"
 	"strconv"
-	"github.com/iomz/go-llrp/binutil"
+
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 func parseArg(args []string) int {

@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/iomz/go-llrp/binutil"
 	"io"
 	"os"
 	"strconv"
+
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 func parseArg(args []string) int {

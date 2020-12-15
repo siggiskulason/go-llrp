@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 func sixenc2bin(sixenc []rune) []rune {

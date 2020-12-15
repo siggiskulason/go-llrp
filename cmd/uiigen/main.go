@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 	"gopkg.in/alecthomas/kingpin.v2"
 )
 

@@ -7,7 +7,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/iomz/go-llrp/binutil"
+	"github.com/siggiskulason/go-llrp/binutil"
 )
 
 // PartitionTableKey is used for PartitionTables
