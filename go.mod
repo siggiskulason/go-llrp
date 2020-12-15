@@ -1,4 +1,4 @@
-module github.com/iomz/go-llrp
+module github.com/siggiskulason/go-llrp
 
 go 1.14
 
